@@ -1,8 +1,3 @@
-
-# This project is intended for optical inspection of PCBs for bare, assembled boards and solder joints.
-# By editing relevant parts and changing required parameters you can inspect your defective board based on template board image in JPEG format.
-# Please refer to the research paper for more information.
-
 #Disclaimer:
 # Furkan Ülger, Seniha Esen Yüksel
 # Department of Electrical and Electronics Engineering
