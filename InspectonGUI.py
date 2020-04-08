@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Disclaimer:
 # Furkan Ülger, Seniha Esen Yüksel
 # Department of Electrical and Electronics Engineering
@@ -995,9 +996,9 @@ class Ui_mainWindow(object):
         cv2.putText(background, 'Group 4 defects(breakout,pinhole)', (50, 615), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                     (0, 0, 255), 2)
         # cv2.imshow('Classified defects', background)
-        cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare_classified.JPEG', background)
+        cv2.imwrite(r'bare_classified.JPEG', background)
         ################
-        pixmap = QtGui.QPixmap(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare_classified.JPEG')
+        pixmap = QtGui.QPixmap(r'bare_classified.JPEG')
         self.BoardImage_2.setPixmap(pixmap)
 
 
@@ -1042,10 +1043,10 @@ class Ui_mainWindow(object):
                             for i in range(1, 31):  # loop 30 times
 
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare Template board image' + str(
+                                            r'bare Template board image' + str(
                                                     i) + '.JPEG', frame)
                                     a = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare Template board image' + str(
+                                            r'bare Template board image' + str(
                                                     i) + '.JPEG').astype('float64')
                                     temp = temp + a  # so as to prevent overflow the image is stored as float64 datatype rather than unsigned 8 bits
 
@@ -1066,10 +1067,10 @@ class Ui_mainWindow(object):
                             1) == 8:  # Backspace is pressed once again , write the captured defective board image
                             for i in range(1, 31):
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare Defective board image' + str(
+                                            r'bare Defective board image' + str(
                                                     i) + '.JPEG', frame)
                                     b = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\bare Defective board image' + str(i) + '.JPEG').astype('float64')
+                                            r'bare Defective board image' + str(i) + '.JPEG').astype('float64')
                                     defect = defect + b
 
                             defect = defect / 30
@@ -1118,10 +1119,10 @@ class Ui_mainWindow(object):
                             for i in range(1, 31):  # loop 30 times
 
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb Template board image' + str(
+                                            r'assemb Template board image' + str(
                                                     i) + '.JPEG', frame)
                                     a = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb Template board image' + str(
+                                            r'assemb Template board image' + str(
                                                     i) + '.JPEG').astype('float32')
                                     temp = temp + a  # so as to prevent overflow the image is stored as float64 datatype rather than unsigned 8 bits
 
@@ -1138,10 +1139,10 @@ class Ui_mainWindow(object):
                     elif cv2.waitKey(1) == 8:  # Backspace is pressed once again , write the captured defective board image
                             for i in range(1, 31):
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb Defective board image' + str(
+                                            r'assemb Defective board image' + str(
                                                     i) + '.JPEG', frame)
                                     b = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb Defective board image' + str(i) + '.JPEG').astype('float32')
+                                            r'assemb Defective board image' + str(i) + '.JPEG').astype('float32')
                                     defect = defect + b
 
                             defect = defect / 30
@@ -1214,7 +1215,7 @@ class Ui_mainWindow(object):
 
             # Draw top matches
             imMatches = cv2.drawMatches(golden_binary, keypoints1, defective_binary, keypoints2, matches, None)
-            cv2.imwrite(r"C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\matches.jpg", imMatches)
+            cv2.imwrite(r"matches.jpg", imMatches)
 
             # Extract location of good matches
             points1 = np.zeros((len(matches), 2), dtype=np.float32)
@@ -1306,9 +1307,9 @@ class Ui_mainWindow(object):
                     # print(cnt)
                     x, y, w, h = cv2.boundingRect(cnt)
                     roi_group = defective_im[y - 35:y + h + 35, x - 35:x + w + 35]
-                    cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\ROI' + str(idx) + '.JPEG',roi_group)
+                    cv2.imwrite(r'ROI' + str(idx) + '.JPEG',roi_group)
             ########################
-                    pixmap = QtGui.QPixmap(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\ROI' + str(idx) + '.JPEG')
+                    pixmap = QtGui.QPixmap(r'ROI' + str(idx) + '.JPEG')
 
                     self.label = QtGui.QLabel(self.centralwidget)
                     self.label.setText(_fromUtf8(""))
@@ -1503,7 +1504,7 @@ class Ui_mainWindow(object):
                 cv2.imshow('wrong IC',correct_type_error)
                 # cv2.waitKey(0)
 
-                cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\wrong_IC.JPEG', correct_type_error)
+                cv2.imwrite(r'wrong_IC.JPEG', correct_type_error)
 
                 kernel = np.ones((35,35),np.uint8)
                 for_correct_ty= cv2.dilate(for_correct_ty,kernel,iterations=5)
@@ -1521,7 +1522,7 @@ class Ui_mainWindow(object):
                 cv2.imshow('correct type error',type_err)
                 # cv2.waitKey(0)
 
-                pixmap = QtGui.QPixmap(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\wrong_IC.JPEG')
+                pixmap = QtGui.QPixmap(r'wrong_IC.JPEG')
 
                 self.label_2 = QtGui.QLabel(self.centralwidget)
                 self.label_2.setText(_fromUtf8(""))
@@ -1603,9 +1604,9 @@ class Ui_mainWindow(object):
         cv2.putText(background, 'Correct Type Defect', (50, 615), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                     (0, 255, 255), 2)
         # cv2.imshow('Classified defects', background)
-        cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb_classified.JPEG', background)
+        cv2.imwrite(r'assemb_classified.JPEG', background)
         ################
-        pixmap = QtGui.QPixmap(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\assemb_classified.JPEG')
+        pixmap = QtGui.QPixmap(r'assemb_classified.JPEG')
         pixmap = pixmap.scaled(self.BoardImage_2.width(), self.BoardImage_2.height(), QtCore.Qt.KeepAspectRatio)
         self.BoardImage_2.setPixmap(pixmap)
         self.BoardImage_2.setAlignment(QtCore.Qt.AlignRight)
@@ -1968,7 +1969,7 @@ class Ui_mainWindow(object):
                     cv2.imshow('rotated roi',roi)
 
 
-                    cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\extracted_OCR{}.png'.format(i), roi)
+                    cv2.imwrite(r'extracted_OCR{}.png'.format(i), roi)
                     # read_txt = pytesseract.image_to_string(Image.open(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\extracted_OCR{}.png'.format(ith)),config=config)
                     # cv2.imshow('Text to be recognized',upd_roi)
 
@@ -2013,7 +2014,7 @@ class Ui_mainWindow(object):
                             ValueError
                         if area_cont > 250:
                             cv2.imshow('OCR image', output)
-                            filepath = r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\TextOCR{}.png'.format(num)
+                            filepath = r'TextOCR{}.png'.format(num)
                             cv2.imwrite(filepath,output)
                             path_OCR.append(filepath)
                         # cv2.waitKey(0)
@@ -2108,10 +2109,10 @@ class Ui_mainWindow(object):
                             for i in range(1, 31):  # loop 30 times
 
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder Template board image' + str(
+                                            r'solder Template board image' + str(
                                                     i) + '.JPEG', frame)
                                     a = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder Template board image' + str(
+                                            r'solder Template board image' + str(
                                                     i) + '.JPEG').astype('float64')
                                     temp = temp + a  # so as to prevent overflow the image is stored as float64 datatype rather than unsigned 8 bits
 
@@ -2133,10 +2134,10 @@ class Ui_mainWindow(object):
                             1) == 8:  # Backspace is pressed once again , write the captured defective board image
                             for i in range(1, 31):
                                     cv2.imwrite(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder Defective board image' + str(
+                                            r'solder Defective board image' + str(
                                                     i) + '.JPEG', frame)
                                     b = cv2.imread(
-                                            r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder Defective board image' + str(i) + '.JPEG').astype('float64')
+                                            r'solder Defective board image' + str(i) + '.JPEG').astype('float64')
                                     defect = defect + b
 
                             defect = defect / 30
@@ -2252,9 +2253,9 @@ class Ui_mainWindow(object):
                     (50, 585), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 191, 0), 2)
 
         # cv2.imshow('Classified defects', background)
-        cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder_classified.JPEG', background)
+        cv2.imwrite(r'solder_classified.JPEG', background)
         ################
-        pixmap = QtGui.QPixmap(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\solder_classified.JPEG')
+        pixmap = QtGui.QPixmap(r'solder_classified.JPEG')
         pixmap = pixmap.scaled(self.BoardImage_2.width(), self.BoardImage_2.height(), QtCore.Qt.KeepAspectRatio)
         self.BoardImage_2.setPixmap(pixmap)
         self.BoardImage_2.setAlignment(QtCore.Qt.AlignRight)

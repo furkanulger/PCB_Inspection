@@ -24,6 +24,9 @@ https://ieeexplore.ieee.org/document/8936659
 		- for example: `pip install PyQt4‑4.11.4‑cp36‑cp36m‑win_amd64.whl` if it is 64 bit one
 - Install other packages
 	- `pip install opencv-python==3.2.0.8 matplotlib numpy pytesseract imutils`
+- Install Tesseract
+	- Download [this](https://excellmedia.dl.sourceforge.net/project/tesseract-ocr-alt/tesseract-ocr-setup-3.02.02.exe) (Or go to [here](https://sourceforge.net/projects/tesseract-ocr-alt/files/) and download the required version)
+	- Install it with default settings
 
 ## Run
 
