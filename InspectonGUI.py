@@ -14,7 +14,7 @@ import imutils
 from PIL import Image
 from matplotlib import pyplot as plt
 import sys
-from selectboard import Ui_Dialog
+from BoardSelect import Ui_Dialog
 
 import os
 
@@ -45,19 +45,19 @@ class Ui_mainWindow(object):
         self.ui.setupUi(self.Dialog)
         self.Dialog.show()
 
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Bare\bare_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Bare\bare_1 Defective board image.JPEG'
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.CaptureFrame_bare(pathway_temp_1,pathway_def_1))
 
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Bare\bare_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Bare\bare_2 Defective board image.JPEG'
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda:self.CaptureFrame_bare(pathway_temp_2,pathway_def_2))
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Bare\bare_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Bare\bare_3 Defective board image.JPEG'
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(lambda:self.CaptureFrame_bare(pathway_temp_3,pathway_def_3))
 
@@ -67,20 +67,20 @@ class Ui_mainWindow(object):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self.Dialog)
         self.Dialog.show()
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Assembled\assemb_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Assembled\assemb_1 Defective board image.JPEG'
 
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.CaptureFrame_assemb(pathway_temp_1,pathway_def_1))
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Assembled\assemb_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Assembled\assemb_2 Defective board image.JPEG'
 
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda:self.CaptureFrame_assemb(pathway_temp_2,pathway_def_2))
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Assembled\assemb_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Assembled\assemb_3 Defective board image.JPEG'
 
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(lambda:self.CaptureFrame_assemb(pathway_temp_3,pathway_def_3))
@@ -94,20 +94,20 @@ class Ui_mainWindow(object):
         self.Dialog.show()
 
 
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Solder\solder_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Solder\solder_1 Defective board image.JPEG'
 
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.CaptureFrame_solder(pathway_temp_1,pathway_def_1))
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Solder\solder_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Solder\solder_2 Defective board image.JPEG'
 
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda:self.CaptureFrame_solder(pathway_temp_2,pathway_def_2))
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Solder\solder_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Solder\solder_3 Defective board image.JPEG'
 
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(lambda:self.CaptureFrame_solder(pathway_temp_3,pathway_def_3))
@@ -120,27 +120,27 @@ class Ui_mainWindow(object):
         self.ui.setupUi(self.Dialog)
         self.Dialog.show()
 
-        pathway_temp_lib = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_lib Template board image.JPEG'
-        pathway_def_lib = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_lib Defective board image.JPEG'
+        pathway_temp_lib = r'BOARD LIBRARY\Bare\bare_lib Template board image.JPEG'
+        pathway_def_lib = r'BOARD LIBRARY\Bare\bare_lib Defective board image.JPEG'
         self.ui.library.clicked.connect(self.Dialog.close)
         self.ui.library.clicked.connect(lambda: self.bareboard_1(pathway_temp_lib,pathway_def_lib,drows=23,dcolumns=25,trows=30,tcolumns=30,pos_blur=7,neg_blur=7,blur_roi=7,num_iterate1=1,num_iterate2=2,num_iterate3=3))
 
 
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Bare\bare_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Bare\bare_1 Defective board image.JPEG'
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.bareboard_1(pathway_temp_1,pathway_def_1,drows=45,dcolumns=35,trows=45,tcolumns=35,pos_blur=5,neg_blur=7,blur_roi=3,num_iterate1=1,num_iterate2=1,num_iterate3=1))
 
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Bare\bare_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Bare\bare_2 Defective board image.JPEG'
         # self.ui.number_2.clicked.connect(lambda: self.bareboard_1(pathway_temp_2,pathway_def_2,drows=37,dcolumns=37,trows=37,tcolumns=37,posneg_blur=9,blur_roi=5))
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda: self.bareboard_1(pathway_temp_2, pathway_def_2, drows=37, dcolumns=37, trows=37, tcolumns=37,pos_blur=7,neg_blur=7, blur_roi=3,num_iterate1=1,num_iterate2=1,num_iterate3=1))
 
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Bare\bare_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Bare\bare_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Bare\bare_3 Defective board image.JPEG'
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(lambda: self.bareboard_1(pathway_temp_3,pathway_def_3,drows=17,dcolumns=17,trows=30,tcolumns=30,pos_blur=9,neg_blur=9,blur_roi=3,num_iterate1=0,num_iterate2=0,num_iterate3=0))
 
@@ -151,28 +151,28 @@ class Ui_mainWindow(object):
         self.ui.setupUi(self.Dialog)
         self.Dialog.show()
 
-        pathway_temp_lib = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_lib Template board image.JPEG'
-        pathway_def_lib = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_lib Defective board image.JPEG'
+        pathway_temp_lib = r'BOARD LIBRARY\Assembled\assemb_lib Template board image.JPEG'
+        pathway_def_lib = r'BOARD LIBRARY\Assembled\assemb_lib Defective board image.JPEG'
         self.ui.library.clicked.connect(self.Dialog.close)
         self.ui.library.clicked.connect(lambda: self.assembledBoard_1(pathway_temp_lib,pathway_def_lib,alignment=alignImages,threshold_mis=25,opening_mis = 2,thresh_fg_temp=170,thresh_fg_def=170,blur_roi=7,a_cspace=125,a_cspace_def=125,b_cspace_temp=100,b_cspace_def=100,open_it=8,close_it=10,pol_minArea = 150))
 
 
 
 
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Assembled\assemb_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Assembled\assemb_1 Defective board image.JPEG'
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.assembledBoard_1(pathway_temp_1,pathway_def_1,alignment=align_2,threshold_mis=70,opening_mis = 4,thresh_fg_temp=250,thresh_fg_def = 250,blur_roi=7,a_cspace=1,a_cspace_def=1,b_cspace_temp=123,b_cspace_def=123,open_it=1,close_it=1,pol_minArea = 499))
 
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Assembled\assemb_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Assembled\assemb_2 Defective board image.JPEG'
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda: self.assembledBoard_1(pathway_temp_2,pathway_def_2,alignment=align_2,threshold_mis=85,opening_mis = 2,thresh_fg_temp=100,thresh_fg_def = 120,blur_roi=7,a_cspace=137,a_cspace_def=137,b_cspace_temp=131,b_cspace_def=131,open_it=1,close_it=1,pol_minArea=150))
 
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Assembled\assemb_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Assembled\assemb_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Assembled\assemb_3 Defective board image.JPEG'
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(
             lambda: self.assembledBoard_1(pathway_temp_3, pathway_def_3, alignment=align_2, threshold_mis=93, opening_mis = 2,
@@ -187,18 +187,18 @@ class Ui_mainWindow(object):
         self.Dialog.show()
 
 
-        pathway_temp_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_1 Template board image.JPEG'
-        pathway_def_1 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_1 Defective board image.JPEG'
+        pathway_temp_1 = r'BOARD LIBRARY\Solder\solder_1 Template board image.JPEG'
+        pathway_def_1 = r'BOARD LIBRARY\Solder\solder_1 Defective board image.JPEG'
         self.ui.number_1.clicked.connect(self.Dialog.close)
         self.ui.number_1.clicked.connect(lambda: self.solderjoint_1(pathway_temp_1,pathway_def_1))
 
-        pathway_temp_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_2 Template board image.JPEG'
-        pathway_def_2 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_2 Defective board image.JPEG'
+        pathway_temp_2 = r'BOARD LIBRARY\Solder\solder_2 Template board image.JPEG'
+        pathway_def_2 = r'BOARD LIBRARY\Solder\solder_2 Defective board image.JPEG'
         self.ui.number_2.clicked.connect(self.Dialog.close)
         self.ui.number_2.clicked.connect(lambda: self.solderjoint_1(pathway_temp_2,pathway_def_2))
 
-        pathway_temp_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_3 Template board image.JPEG'
-        pathway_def_3 = r'C:\Users\furka\YandexDisk\Backup Project works here\BOARD LIBRARY\Solder\solder_3 Defective board image.JPEG'
+        pathway_temp_3 = r'BOARD LIBRARY\Solder\solder_3 Template board image.JPEG'
+        pathway_def_3 = r'BOARD LIBRARY\Solder\solder_3 Defective board image.JPEG'
         self.ui.number_3.clicked.connect(self.Dialog.close)
         self.ui.number_3.clicked.connect(lambda: self.solderjoint_1(pathway_temp_3,pathway_def_3))
 
@@ -208,29 +208,29 @@ class Ui_mainWindow(object):
         mainWindow.setObjectName(_fromUtf8("mainWindow"))
         mainWindow.resize(1920, 1080)
         mainWindow.setStyleSheet(_fromUtf8("QPushButton#inspectbtn{\n"
-"    background-color: rgb(255, 0, 0);\n"
-"    color: rgb(255, 255, 255);\n"
-"border:None\n"
-"}\n"
-"QPushButton#imLoadbtn{\n"
-"    background-color: rgb(0, 255, 127);\n"
-"    color: rgb(255, 255, 255);\n"
-"border:None\n"
-"}\n"
-"\n"
-"QPushButton#inspectbtn_2{\n"
-"    background-color: rgb(255, 0, 0);\n"
-"    color: rgb(255, 255, 255);\n"
-"border:None\n"
-"}\n"
-"\n"
-"QPushButton#imLoadbtn_2{\n"
-"    background-color: rgb(0, 255, 127);\n"
-"    color: rgb(255, 255, 255);\n"
-"border:None\n"
-"}\n"
-"\n"
-""))
+                                           "    background-color: rgb(255, 0, 0);\n"
+                                           "    color: rgb(255, 255, 255);\n"
+                                           "border:None\n"
+                                           "}\n"
+                                           "QPushButton#imLoadbtn{\n"
+                                           "    background-color: rgb(0, 255, 127);\n"
+                                           "    color: rgb(255, 255, 255);\n"
+                                           "border:None\n"
+                                           "}\n"
+                                           "\n"
+                                           "QPushButton#inspectbtn_2{\n"
+                                           "    background-color: rgb(255, 0, 0);\n"
+                                           "    color: rgb(255, 255, 255);\n"
+                                           "border:None\n"
+                                           "}\n"
+                                           "\n"
+                                           "QPushButton#imLoadbtn_2{\n"
+                                           "    background-color: rgb(0, 255, 127);\n"
+                                           "    color: rgb(255, 255, 255);\n"
+                                           "border:None\n"
+                                           "}\n"
+                                           "\n"
+                                           ""))
         ####################
 
 
@@ -1269,8 +1269,8 @@ class Ui_mainWindow(object):
             colour = np.asarray([B, G, R])
             rows, columns = image.shape[:2]
 
-            for r in xrange(rows):
-                    for c in xrange(columns):
+            for r in range(rows):
+                    for c in range(columns):
                             pixel = image[r][c]
                             if all(pixel == white):
                                     image[r][c] = colour
@@ -1297,12 +1297,13 @@ class Ui_mainWindow(object):
             cv2.imshow('median blurred roi image',image)
             # cv2.waitKey(0)
 
-            ret, contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            ret, contours,_ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
             print(len(contours),i)
 
             idx = 0
             for (i,cnt) in enumerate(contours,i):
                     idx += 1
+                    # print(cnt)
                     x, y, w, h = cv2.boundingRect(cnt)
                     roi_group = defective_im[y - 35:y + h + 35, x - 35:x + w + 35]
                     cv2.imwrite(r'C:\Users\furka\PycharmProjects\imageProcessing\openCV\images\ROI' + str(idx) + '.JPEG',roi_group)
