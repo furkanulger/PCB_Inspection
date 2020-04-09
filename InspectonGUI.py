@@ -6,6 +6,7 @@
 # Ankara, Turkey
 # furkan.ulger@outlook.com
 #Please give reference to the research paper if you are willing to use.
+# https://ieeexplore.ieee.org/abstract/document/8936659
 
 from PyQt4 import QtCore, QtGui
 import cv2
