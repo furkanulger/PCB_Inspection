@@ -1,0 +1,7 @@
+.*.swp
+*.JPEG
+*.jpg
+__pycache__/
+*.pyc
+ROI/*
+!ROI/.gitkeep
